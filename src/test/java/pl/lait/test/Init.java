@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -24,6 +23,7 @@ public class Init {
 	        System.setProperty("webdriver.chrome.driver","C:/Users/zbynn/Desktop/Kurs IT/SeleniumLibs/chromedriver.exe");
 	        
 	        //driver = new ChromeDriver();
+	        
 	        URL remoteAddress = null;
 			try {
 				remoteAddress = new URL("http://localhost:4444/wd/hub");
@@ -51,5 +51,12 @@ public class Init {
 		
 		
 	}
+	
+	public static void end() {
+		driver.quit();
+		driver = null;
+	}
+	
+	
 	
 }

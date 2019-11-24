@@ -1,6 +1,5 @@
 package pl.lait.test;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -73,7 +72,7 @@ public class ReservationTest {
 
 	//@After
 	public void tearDown() {
-		driver.close();
+		Init.end();
 	}
 
 }

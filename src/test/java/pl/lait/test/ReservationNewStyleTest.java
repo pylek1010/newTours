@@ -1,4 +1,5 @@
 package pl.lait.test;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -35,6 +36,11 @@ public class ReservationNewStyleTest {
 		// wypełniam 2gi etap
 		// zatwierdzam guzikiem
 		
+	}
+	
+	@After
+	public void tearDown() {
+		Init.end();
 	}
 	
 	

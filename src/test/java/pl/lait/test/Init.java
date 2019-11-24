@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -22,7 +22,7 @@ public class Init {
 			System.out.println(" -- Wewnatrz getDriver null");
 	        System.setProperty("webdriver.chrome.driver","C:/Users/zbynn/Desktop/Kurs IT/SeleniumLibs/chromedriver.exe");
 	        
-	        //driver = new ChromeDriver();
+	        
 	        
 	        URL remoteAddress = null;
 			try {
@@ -33,7 +33,7 @@ public class Init {
 			}
 	        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 	        driver = new RemoteWebDriver(remoteAddress, capabilities);
-	        
+	        //driver = new ChromeDriver();
 	        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	        
 	        Dimension rozmiarOkna = driver.manage().window().getSize();

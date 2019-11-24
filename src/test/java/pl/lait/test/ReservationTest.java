@@ -1,5 +1,6 @@
 package pl.lait.test;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -70,7 +71,7 @@ public class ReservationTest {
 		driver.findElement(By.name("findFlights")).click();
 	}
 
-	//@After
+	@After
 	public void tearDown() {
 		Init.end();
 	}
